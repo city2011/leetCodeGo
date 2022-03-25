@@ -10,8 +10,8 @@ func main() {
 }
 
 type TreeNode struct {
-	Val int
-	Left *TreeNode
+	Val   int
+	Left  *TreeNode
 	Right *TreeNode
 }
 
@@ -50,7 +50,7 @@ func tree2str(root *TreeNode) string {
 
 func tree2str2(root *TreeNode) string {
 	var dfs func(*TreeNode) string
-	dfs = func(node *TreeNode) string{
+	dfs = func(node *TreeNode) string {
 		switch {
 		case root == nil:
 			return ""
@@ -64,4 +64,3 @@ func tree2str2(root *TreeNode) string {
 	}
 	return dfs(root)
 }
-

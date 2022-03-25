@@ -5,7 +5,7 @@ import "fmt"
 func main() {
 	head2 := Node{2, nil, nil}
 	head2.Random = &head2
-	head := Node {1, &head2, &head2}
+	head := Node{1, &head2, &head2}
 	newHead := copyRandomList(&head)
 	fmt.Println(newHead)
 }

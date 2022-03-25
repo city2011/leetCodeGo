@@ -60,7 +60,7 @@ func pushDominoes(dominoes string) string {
 	for i := mid; i <= newLeft; i++ {
 		res += "R"
 	}
-	if newRight - newLeft == 2 {
+	if newRight-newLeft == 2 {
 		res += "."
 	}
 	for i := newRight; i <= cur; i++ {

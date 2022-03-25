@@ -11,10 +11,10 @@ func winnerOfGame2(colors string) bool {
 	count := make([]int, 2)
 	cur := 'A'
 	cnt := 0
-	for _,c := range colors {
+	for _, c := range colors {
 		if c != cur {
 			if cnt > 2 {
-				count[cur - 'A'] += cnt - 2
+				count[cur-'A'] += cnt - 2
 			}
 			cur, cnt = c, 1
 		} else {
@@ -22,7 +22,7 @@ func winnerOfGame2(colors string) bool {
 		}
 	}
 	if cnt > 2 {
-		count[cur - 'A'] += cnt - 2
+		count[cur-'A'] += cnt - 2
 	}
 	fmt.Println(count)
 	return count[0] > count[1]
@@ -30,11 +30,11 @@ func winnerOfGame2(colors string) bool {
 
 func winnerOfGame(colors string) bool {
 	n := len(colors)
-	sumA,sumB := 0,0
+	sumA, sumB := 0, 0
 
-	for i:=0;i<n;{
-		countA,countB := 0,0
-		for i < n && colors[i]=='A' {
+	for i := 0; i < n; {
+		countA, countB := 0, 0
+		for i < n && colors[i] == 'A' {
 			countA++
 			i++
 		}
@@ -42,7 +42,7 @@ func winnerOfGame(colors string) bool {
 			sumA += countA - 2
 		}
 
-		for i < n && colors[i]=='B' {
+		for i < n && colors[i] == 'B' {
 			countB++
 			i++
 		}

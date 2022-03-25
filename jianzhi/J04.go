@@ -5,10 +5,12 @@ func main() {
 }
 
 func findNumberIn2DArray(matrix [][]int, target int) bool {
-	if len(matrix) == 0 {return false}
-	n,m := len(matrix),len(matrix[0])
-	x,y := n - 1, 0
-	for x >= 0 && y <= m - 1 {
+	if len(matrix) == 0 {
+		return false
+	}
+	n, m := len(matrix), len(matrix[0])
+	x, y := n-1, 0
+	for x >= 0 && y <= m-1 {
 		if matrix[x][y] == target {
 			return true
 		} else if matrix[x][y] > target {
@@ -17,7 +19,7 @@ func findNumberIn2DArray(matrix [][]int, target int) bool {
 			x--
 		}
 	}
-	return false;
+	return false
 }
 
 func lengthOfLastWord(s string) int {

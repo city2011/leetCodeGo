@@ -3,12 +3,12 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println(replaceSpace2("We are happy."));
+	fmt.Println(replaceSpace2("We are happy."))
 }
 
 func replaceSpace(s string) string {
 	var res string
-	for _,byte1 := range s {
+	for _, byte1 := range s {
 		if byte1 == ' ' {
 			res += "%20"
 		} else {

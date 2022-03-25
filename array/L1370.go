@@ -17,13 +17,13 @@ func sortString(s string) string {
 	fmt.Println(len(ans))
 	for len(ans) < n {
 		for i := byte('a'); i <= 'z'; i++ {
-			if (cnt[i-'a'] > 0) {
+			if cnt[i-'a'] > 0 {
 				ans = append(ans, i)
 				cnt[i-'a']--
 			}
 		}
 		for i := byte('z'); i >= 'a'; i-- {
-			if (cnt[i-'a'] > 0) {
+			if cnt[i-'a'] > 0 {
 				ans = append(ans, i)
 				cnt[i-'a']--
 			}

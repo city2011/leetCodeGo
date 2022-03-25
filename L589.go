@@ -5,10 +5,10 @@ import "fmt"
 func main() {
 	root := Node{
 		88,
-		[] *Node {},
+		[]*Node{},
 	}
 	for i := 0; i < 5; i++ {
-		x := Node {
+		x := Node{
 			Val: i,
 		}
 		root.Children = append(root.Children, &x)
@@ -24,7 +24,7 @@ type Node struct {
 }
 
 type List struct {
-	mem [] int
+	mem []int
 }
 
 func preorder(root *Node) []int {
@@ -42,7 +42,7 @@ func dfs(root *Node, list *List) {
 		return
 	}
 	list.mem = append(list.mem, root.Val)
-	for _,each := range root.Children {
+	for _, each := range root.Children {
 		dfs(each, list)
 	}
 }

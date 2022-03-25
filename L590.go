@@ -5,9 +5,9 @@ func main() {
 }
 
 func postorder(root *Node) []int {
-	list := List {}
+	list := List{}
 	if root == nil {
-		return [] int {}
+		return []int{}
 	}
 
 	dfs1(root, &list)

@@ -7,7 +7,7 @@ func main() {
 func findRepeatNumber(nums []int) int {
 	n := len(nums)
 	visit := make([]bool, n)
-	for _,num := range nums {
+	for _, num := range nums {
 		if visit[num] {
 			return num
 		} else {

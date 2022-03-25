@@ -15,19 +15,18 @@ func Constructor9() CQueue {
 	return CQueue{}
 }
 
-func (this *CQueue) AppendTail(value int)  {
+func (this *CQueue) AppendTail(value int) {
 	this.sA = append(this.sA, value)
 }
 
 func (this *CQueue) DeleteHead() int {
-	if len(this.sA) == 0{
+	if len(this.sA) == 0 {
 		return -1
 	}
 	res := this.sA[0]
 	this.sA = this.sA[1:]
 	return res
 }
-
 
 type CQueue2 struct {
 	sA *list.List
@@ -41,12 +40,12 @@ func Constructor92() CQueue2 {
 	}
 }
 
-func (this *CQueue2) AppendTail(value int)  {
+func (this *CQueue2) AppendTail(value int) {
 	this.sA.PushBack(value)
 }
 
 func (this *CQueue2) DeleteHead() int {
-	if this.sB.Len() == 0{
+	if this.sB.Len() == 0 {
 		for this.sA.Len() > 0 {
 			this.sB.PushBack(this.sA.Remove(this.sA.Back()))
 		}

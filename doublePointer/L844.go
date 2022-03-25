@@ -10,13 +10,13 @@ func main() {
 
 func backspaceCompare(S string, T string) bool {
 	skipS, skipT := 0, 0
-	i, j := len(S) - 1, len(T) - 1
+	i, j := len(S)-1, len(T)-1
 	for i >= 0 {
 		for i >= 0 {
 			if S[i] == '#' {
 				skipS++
 				i--
-			} else if skipS > 0{
+			} else if skipS > 0 {
 				skipS--
 				i--
 			} else {

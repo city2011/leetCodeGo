@@ -26,8 +26,8 @@ func reverseLeftWords2(s string, n int) string {
 
 func reverseLeftWords3(s string, n int) string {
 	bs := make([]byte, len(s))
-	for i := n; i < len(s) + n; i++ {
-		bs[i - n] = s[i % len(s)]
+	for i := n; i < len(s)+n; i++ {
+		bs[i-n] = s[i%len(s)]
 	}
 	return string(bs)
 }

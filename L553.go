@@ -15,7 +15,7 @@ func optimalDivision(nums []int) string {
 	}
 	var res string
 	res = strconv.Itoa(nums[0]) + "/("
-	for i := 1; i < len(nums) - 1; i++ {
+	for i := 1; i < len(nums)-1; i++ {
 		res += strconv.Itoa(nums[i]) + "/"
 	}
 	res += strconv.Itoa(nums[len(nums)-1]) + ")"

@@ -17,10 +17,10 @@ func longestWord(words []string) string {
 		return len(words[i]) < len(words[j]) || len(words[i]) == len(words[j]) && words[i] > words[j]
 	})
 
-	mem := map[string]string {"": "ok"}
+	mem := map[string]string{"": "ok"}
 
 	for _, word := range words {
-		if _,ok := mem[word[:len(word) - 1]];ok {
+		if _, ok := mem[word[:len(word)-1]]; ok {
 			res = word
 			mem[word] = "ok"
 		}

@@ -23,7 +23,7 @@ func levelOrder3(root *TreeNode) [][]int {
 	for len(q) != 0 {
 		n := len(q)
 		var tmp []int
-		for i := 0; i < n;i++ {
+		for i := 0; i < n; i++ {
 			if order {
 				tmp = append(tmp, q[i].Val)
 			} else {

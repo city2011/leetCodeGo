@@ -34,14 +34,14 @@ func reversePrint2(head *ListNode) []int {
 	var res []int
 	var newHead *ListNode
 	cur := head
-	for ;cur != nil; {
+	for cur != nil {
 		tmp := cur.Next
 		cur.Next = newHead
 		newHead = cur
 		cur = tmp
 	}
 
-	for ;newHead != nil; {
+	for newHead != nil {
 		res = append(res, newHead.Val)
 		newHead = newHead.Next
 	}

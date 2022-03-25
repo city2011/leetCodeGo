@@ -104,7 +104,7 @@ func convert3(s string, numRows int) string {
 	res := make([]byte, n)
 	idx := 0
 	for i := 0; i < numRows; i++ {
-		for j := 0; j + i < n; j += t {
+		for j := 0; j+i < n; j += t {
 			res[idx] = s[i+j]
 			if i > 0 && i < numRows-1 && j+t-i < n {
 				idx++
