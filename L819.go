@@ -38,11 +38,3 @@ func mostCommonWord(paragraph string, banned []string) string {
 	}
 	return res
 }
-
-func max(a, b int) int {
-	if a > b {
-		return a
-	} else {
-		return b
-	}
-}
