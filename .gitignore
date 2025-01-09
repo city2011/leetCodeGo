@@ -101,3 +101,5 @@ project/plugins/project/
 # sbt-assembly
 *-assembly.jar
 sg_agent/
+
+pkg
