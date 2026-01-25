@@ -16,7 +16,7 @@ func (a *ATM) Moneys() [5]int {
 	return a.sto
 }
 
-func Constructor() ATM {
+func AtmConstructor() ATM {
 	return ATM{
 		sto: [5]int{},
 	}
@@ -59,7 +59,7 @@ func (a *ATM) Withdraw(amount int) []int {
  */
 
 func main() {
-	obj := Constructor()
+	obj := AtmConstructor()
 	obj.Deposit([]int{0, 0, 1, 2, 1})
 	fmt.Println("money: ", obj.Moneys())
 	fmt.Println(obj.Withdraw(600))

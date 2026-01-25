@@ -16,7 +16,7 @@ func maxEvents(events [][]int) int {
 		groups[e[0]] = append(groups[e[0]], e[1])
 	}
 
-	h := &hp{}
+	h := &hp53{}
 	ans := 0
 	for i, v := range groups {
 		// 第i天， 弹出已结束的会议
@@ -36,15 +36,15 @@ func maxEvents(events [][]int) int {
 	return ans
 }
 
-type hp struct {
+type hp53 struct {
 	sort.IntSlice
 }
 
-func (h *hp) Push(v interface{}) {
+func (h *hp53) Push(v interface{}) {
 	h.IntSlice = append(h.IntSlice, v.(int))
 }
 
-func (h *hp) Pop() interface{} {
+func (h *hp53) Pop() interface{} {
 	a := h.IntSlice
 	v := a[len(a)-1]
 	h.IntSlice = a[:len(a)-1]
