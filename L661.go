@@ -1,7 +1,9 @@
 package main
 
-import "fmt"
-import "basic"
+import (
+	"fmt"
+	"leetCodeGo/src/basic"
+)
 
 func main() {
 	res := imageSmoother([][]int{{1, 1, 1}, {1, 0, 1}, {1, 1, 1}})

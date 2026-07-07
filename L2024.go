@@ -1,8 +1,8 @@
 package main
 
 import (
-	"basic"
 	"fmt"
+	"leetCodeGo/src/basic"
 )
 
 func main() {
@@ -10,12 +10,12 @@ func main() {
 }
 
 func maxConsecutiveAnswers(answerKey string, k int) int {
-	return basic.Max(maxConsecutiveAnswers2(answerKey, k, 'T'), maxConsecutiveAnswers2(answerKey, k, 'F')) 
+	return basic.Max(maxConsecutiveAnswers2(answerKey, k, 'T'), maxConsecutiveAnswers2(answerKey, k, 'F'))
 }
 
 func maxConsecutiveAnswers2(answerKey string, k int, target byte) int {
-	l,sum,ans := 0,0,0
-	for r,_ := range answerKey {
+	l, sum, ans := 0, 0, 0
+	for r, _ := range answerKey {
 		if answerKey[r] != target {
 			sum++
 		}
@@ -25,7 +25,7 @@ func maxConsecutiveAnswers2(answerKey string, k int, target byte) int {
 			}
 			l++
 		}
-		ans = basic.Max(ans, r - l + 1)
+		ans = basic.Max(ans, r-l+1)
 	}
 	return ans
 }

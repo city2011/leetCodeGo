@@ -1,12 +1,12 @@
 package main
 
 import (
-	"basic"
 	"fmt"
+	"leetCodeGo/src/basic" // 修改包导入路径为完整模块路径
 )
 
 func main() {
-	res := findKthNumber(9876, 679)
+	res := findKthNumber(13, 12)
 	fmt.Println(res)
 }
 
@@ -32,7 +32,7 @@ func getSteps(cur, n int) int {
 	for first <= n {
 		steps += basic.Min(n, last) - first + 1
 		first *= 10
-		last = last * 10 + 9
+		last = last*10 + 9
 	}
 	return steps
 }

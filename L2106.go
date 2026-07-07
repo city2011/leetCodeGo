@@ -1,7 +1,7 @@
 package main
 
 import (
-	"basic"
+	"leetCodeGo/src/basic"
 	"math"
 )
 
